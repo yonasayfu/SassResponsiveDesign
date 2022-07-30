@@ -1,0 +1,23 @@
+@use "../util" as u;
+
+// and we should use the name space as an object call like ( util.variableName)
+html {
+  box-sizing: border-box;
+  font-size: 100%; //
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; // inherit from html element
+}
+
+body {
+  // We reset the default browser elments value
+  // because they vary from browser to browser
+  margin: 0;
+  padding: 0;
+  font-family: u.$font;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

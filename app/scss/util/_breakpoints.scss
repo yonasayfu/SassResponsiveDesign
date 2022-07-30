@@ -1,0 +1,26 @@
+// create a breack points for mobile, tablets and Desktops
+// 700px,(mobile will be 700 and less) 900px (taplate), 1440px (small screen and larger)
+
+$breakpoints-up: (
+  "medium": 43.75em,
+  "large": 56.25em,
+  "xlarge": 90em,
+);
+
+$breakpoints-down: (
+  "small": 43.7485em,
+  "medium": 56.24875em,
+  "large": 89.99875em,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

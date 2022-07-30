@@ -1,0 +1,10 @@
+// Create Css custome properties
+
+// set in the root selector it overide any value set in
+// html and body takes the first priority
+// as a rule when we create a variable we use doublehyphen --
+
+:root {
+  --background-color: hsl(0, 0%, 11%);
+  --text-color: hsl(0, 0%, 100%);
+}
